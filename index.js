@@ -4,7 +4,7 @@ const mongoose=require("mongoose")
 const cors=require("cors")
 const dotenv=require("dotenv")
 const bodyparser = require("body-parser")
-const port = process.env.PORT
+const port = process.env.PORT || 4000
 dotenv.config()
 
 mongoose.connect(
@@ -65,6 +65,6 @@ app.use('/api/stock',stockRoute)
 app.use('/api/stocktech',stockTechRougth)
 app.use('/api/complaints',complaintRoute)
 
-app.listen(process.env.PORT || 4000,()=>{
+app.listen(port,()=>{
     console.log("server started at port 4000");
 } )
