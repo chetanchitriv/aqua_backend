@@ -65,6 +65,6 @@ app.use('/api/stock',stockRoute)
 app.use('/api/stocktech',stockTechRougth)
 app.use('/api/complaints',complaintRoute)
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT || 4000,()=>{
     console.log("server started at port 4000");
 } )
